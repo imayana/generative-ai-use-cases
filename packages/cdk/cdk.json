@@ -117,4 +117,17 @@
     "@aws-cdk/core:includePrefixInUniqueNameGeneration": true,
     "@aws-cdk/aws-opensearchservice:enableOpensearchMultiAzWithStandby": true
   }
+}// cdk.json
+{
+  "context": {
+    "ragKnowledgeBaseEnabled": true,
+    "ragKnowledgeBaseId": "XXXXXXXXXX",
+    "ragKnowledgeBaseStandbyReplicas": false,
+    "ragKnowledgeBaseAdvancedParsing": false,
+    "ragKnowledgeBaseAdvancedParsingModelId": "anthropic.claude-3-sonnet-20240229-v1:0",
+    "ragKnowledgeBaseBinaryVector": false,
+    "embeddingModelId": "amazon.titan-embed-text-v2:0",
+    "rerankingModelId": "amazon.rerank-v1:0",
+    "queryDecompositionEnabled": true
+  }
 }
