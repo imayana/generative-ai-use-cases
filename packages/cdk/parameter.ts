@@ -78,4 +78,16 @@ export const getParams = (app: cdk.App): ProcessedStackInput => {
     // Process agentCoreRegion: null -> modelRegion
     agentCoreRegion: params.agentCoreRegion || params.modelRegion,
   };
+};// parameter.ts
+const envs: Record<string, Partial<StackInput>> = {
+  dev: {
+    ragKnowledgeBaseEnabled: true,
+    ragKnowledgeBaseId: 'XXXXXXXXXX',
+    ragKnowledgeBaseStandbyReplicas: false,
+    ragKnowledgeBaseAdvancedParsing: false,
+    ragKnowledgeBaseAdvancedParsingModelId:
+      'anthropic.claude-3-sonnet-20240229-v1:0',
+    ragKnowledgeBaseBinaryVector: false,
+    embeddingModelId: 'amazon.titan-embed-text-v2:0',
+  },
 };
